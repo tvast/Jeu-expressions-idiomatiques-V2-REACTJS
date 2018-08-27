@@ -62,6 +62,7 @@ function initValue () {
           document.getElementById("reponseOut").innerHTML =saveTraduce[0]
           console.log(saveTraduce);
           saveTraduce=[];
+          document.getElementById("trigger").innerHTML = "Suivant"
         }
       };
 
@@ -75,23 +76,23 @@ function initValue () {
       const BasicExample = () => (
         <Router>
         <div>
-        <ul>
-        <li>
-        <Link to="/">Accueil</Link>
-        </li>
-        <li>
-        <Link to="/about">About</Link>
-        </li>
-        <li>
-        <Link to="/topics">Jeu</Link>
-        </li>
-        </ul>
+      
 
-        <hr />
+
+          <nav>
+            <div className="nav-wrapper blue">
+              <a href="#" className="brand-logo">Logo</a>
+              <ul id="nav-mobile" className="right hide-on-med-and-down">
+                <li><Link to="/">Accueil</Link></li>
+                <li><Link to="/jeu">jeu</Link></li>
+              </ul>
+            </div>
+          </nav>
+
+        
 
         <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/topics" component={Topics} />
+        <Route path="/jeu" component={Jeu} />
         </div>
         </Router>
         );
@@ -132,9 +133,6 @@ function initValue () {
         >écrivez la bonne traduction de ces expressions idiomatiques</h5>
         </div>
         <div className={style.row , style.center}>
-        <Button variant="contained" color="primary">
-        c'est partit !
-        </Button>
         </div>
         <br/><br/>
 
@@ -143,7 +141,7 @@ function initValue () {
         </div>
         );
 
-        const Topics = ({ match }) => (
+        const Jeu = () => (
         <div>
         <div className={style2.hill2}></div>
         <div className={style2.hill1}></div>
@@ -167,98 +165,7 @@ function initValue () {
         </div>
         </div>
 
-        <div className={style2.flexContainer}>
-        <div className={style2.diamond}>
-        <div className={style2.top}>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        </div>
-        <div className="bottom">
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        <div className={style2.trail}>
-        <div className={style2.ballLeft}></div>
-        <div className={style2.ballRight}></div>
-        </div>
-        </div>
-        </div>
-        </div>
+        
 
         <div className="container">
         <div className="section">
@@ -266,7 +173,7 @@ function initValue () {
         <div className="row">
         <div className="input-field col s6">
 
-        <h4  id="start" className="white-text">Etre sage comme une image</h4>
+        <p  id="start" className="white-text">Etre sage comme une image</p>
         </div>
         <div className="input-field col s6">
 
@@ -289,18 +196,6 @@ function initValue () {
         </div>
 
         </div>
-        </div>
-        );
-
-        const About = () => (
-        <h1>hello</h1>
-        );
-
-       
-
-        const Topic = ({ match }) => (
-        <div>
-        <h3>{match.params.topicId}</h3>
         </div>
         );
 

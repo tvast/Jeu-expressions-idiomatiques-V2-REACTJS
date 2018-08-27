@@ -1,16 +1,12 @@
 import * as React from "react"
 import {Component} from "react";
-
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+//Style
 import style from "./css/materialize.css";
 import style2 from "./css/style.css";
-import Button from '@material-ui/core/Button';
 
-
- function handleClick() {
-    console.log('Click happened');}
-    var saveTraduce = []
+let saveTraduce = []
 function initValue () {
   let quotes = 
   [
@@ -35,24 +31,15 @@ function initValue () {
   {fr:"Aller comme un gant",es:"Encajar perfectamente",ot:"Frida Kahlo"},
   {fr:"Etre comme un coq en pâte",es:"Tener una vida de reyes",ot:"Hemingway"},
   {fr:"Ce n’est pas la mer à boire !",es:"No es para tanto !",ot:"Che Guevara"},
-
   ];
-
-
-
   let x = quotes.length ;
   let y = Math.floor((Math.random() * x) + 0);
   document.getElementById("start").innerHTML = quotes[y].fr;
-
   saveTraduce.push(quotes[y].es);
   console.log(saveTraduce);
-        // document.getElementById("othor").innerHTML = quotes2[y].ot;
+};
 
-      };
-
-
-
-    function  showAnswer() {
+function showAnswer() {
         let reponse = document.getElementById("reponseIn").value
 
         if (reponse == saveTraduce[0]) {
@@ -66,139 +53,124 @@ function initValue () {
         }
       };
 
-    function myFunction() {
-        location.reload();
- 
-      };
-
-
-
-      const BasicExample = () => (
-        <Router>
-        <div>
-      
-
-
-          <nav>
-            <div className="nav-wrapper blue">
-              <a href="#" className="brand-logo">Logo</a>
-              <ul id="nav-mobile" className="right hide-on-med-and-down">
-                <li><Link to="/">Accueil</Link></li>
-                <li><Link to="/jeu">jeu</Link></li>
-              </ul>
-            </div>
-          </nav>
-
-        
-
-        <Route exact path="/" component={Home} />
-        <Route path="/jeu" component={Jeu} />
-        </div>
-        </Router>
+const RootComponent = () => (
+    <Router>
+    <div>
+    <nav>
+    <div className="nav-wrapper blue">
+    <a href="#" className="brand-logo"><img width="50%" src="https://www.institutfrancais.es/wp-content/uploads/2017/09/logo-institut-francais-espagne.png"/></a>
+    <ul id="nav-mobile" className="right hide-on-med-and-down">
+    <li><Link to="/">Accueil</Link></li>
+    <li><Link to="/jeu">jeu</Link></li>
+    </ul>
+    </div>
+    </nav>
+    <Route exact path="/" component={Home} />
+    <Route path="/jeu" component={Jeu} />
+    </div>
+    </Router>
         );
 
-      const Home = () => (
-        <div className={style.introStyle}>
+const Home = () => (
+    <div className={style.introStyle}>
 
-        <div className={style2.hill2}></div>
-        <div className={style2.hill1}></div>
-        <div className={style2.ground}></div>
-        <div className={style2.tree,style2.tree1}>
-        <div className={style2.trunk}>
-        <div className={style2.leftbranch}></div>
-        <div className={style2.rightbranch}></div>
-        </div>
-        </div>
-        <div className={style2.tree, style2.tree2}>
-        <div className={style2.trunk}>
-        <div className={style2.leftbranch}></div>
-        <div className={style2.rightbranch}></div>
-        </div>
-        </div>
-        <div className={style2.tree, style2.tree3}>
-        <div className={style2.trunk}>
-        <div className={style2.leftbranch}></div>
-        <div className={style2.rightbranch}></div>
-        </div>
-        </div>
+    <div className={style2.hill2}></div>
+    <div className={style2.hill1}></div>
+    <div className={style2.ground}></div>
+    <div className={style2.tree,style2.tree1}>
+    <div className={style2.trunk}>
+    <div className={style2.leftbranch}></div>
+    <div className={style2.rightbranch}></div>
+    </div>
+    </div>
+    <div className={style2.tree, style2.tree2}>
+    <div className={style2.trunk}>
+    <div className={style2.leftbranch}></div>
+    <div className={style2.rightbranch}></div>
+    </div>
+    </div>
+    <div className={style2.tree, style2.tree3}>
+    <div className={style2.trunk}>
+    <div className={style2.leftbranch}></div>
+    <div className={style2.rightbranch}></div>
+    </div>
+    </div>
 
 
 
-        <div className={style.section} id="index-banner">
-        <div className={style.container}>
-        <br/><br/>
-        <h1 className={style.header, style.center, style.whitetext}>Découvrez les traductions des  expressions françaises</h1>
-        <div className={style.row, style.center, style.whitetext}>
-        <h5 className={style.header, style.col, style.whitetext, style.s12, style.light}
-        >écrivez la bonne traduction de ces expressions idiomatiques</h5>
-        </div>
-        <div className={style.row , style.center}>
-        </div>
-        <br/><br/>
+    <div className={style.section} id="index-banner">
+    <div className={style.container}>
+    <br/><br/>
+    <h1 className={style.header, style.center, style.whitetext}>Découvrez les traductions des  expressions françaises</h1>
+    <div className={style.row, style.center, style.whitetext}>
+    <h5 className={style.header, style.col, style.whitetext, style.s12, style.light}
+    >écrivez la bonne traduction de ces expressions idiomatiques</h5>
+    </div>
+    <div className={style.row , style.center}>
+    </div>
+    <br/><br/>
 
-        </div>
-        </div>
-        </div>
+    </div>
+    </div>
+    </div>
         );
 
-        const Jeu = () => (
-        <div>
-        <div className={style2.hill2}></div>
-        <div className={style2.hill1}></div>
-        <div className={style2.ground}></div>
-        <div className={style2.tree,style2.tree1}>
-        <div className={style2.trunk}>
-        <div className={style2.leftbranch}></div>
-        <div className={style2.rightbranch}></div>
-        </div>
-        </div>
-        <div className={style2.tree, style2.tree2}>
-        <div className={style2.trunk}>
-        <div className={style2.leftbranch}></div>
-        <div className={style2.rightbranch}></div>
-        </div>
-        </div>
-        <div className={style2.tree, style2.tree3}>
-        <div className={style2.trunk}>
-        <div className={style2.leftbranch}></div>
-        <div className={style2.rightbranch}></div>
-        </div>
-        </div>
+const Jeu = () => (
+    <div>
+    <div className={style2.hill2}></div>
+    <div className={style2.hill1}></div>
+    <div className={style2.ground}></div>
+    <div className={style2.tree,style2.tree1}>
+    <div className={style2.trunk}>
+    <div className={style2.leftbranch}></div>
+    <div className={style2.rightbranch}></div>
+    </div>
+    </div>
+    <div className={style2.tree, style2.tree2}>
+    <div className={style2.trunk}>
+    <div className={style2.leftbranch}></div>
+    <div className={style2.rightbranch}></div>
+    </div>
+    </div>
+    <div className={style2.tree, style2.tree3}>
+    <div className={style2.trunk}>
+    <div className={style2.leftbranch}></div>
+    <div className={style2.rightbranch}></div>
+    </div>
+    </div>
 
-        
 
-        <div className="container">
-        <div className="section">
 
-        <div className="row">
-        <div className="input-field col s6">
+    <div className="container">
+    <div className="section">
 
-        <p  id="start" className="white-text">Etre sage comme une image</p>
-        </div>
-        <div className="input-field col s6">
+    <div className="row">
+    <div className="input-field col s6">
 
-        <input id="reponseIn" type="text" className="validate white-text"/>
-        <label className="active white-text" >réponse</label>
-        </div>
+    <p  id="start" className="white-text">Etre sage comme une image</p>
+    </div>
+    <div className="input-field col s6">
 
-        <div className="container center input-field col s12">
-        <a id="triggerAnswer" onClick={showAnswer} className="waves-effect waves-light btn-large">Vérifier</a>
-        <a onClick={initValue} id="trigger" className="button ">Démarer</a>
+    <input id="reponseIn" type="text" className="validate white-text"/>
+    <label className="active white-text" >réponse</label>
+    </div>
 
-        <h4 className="white-text" id="reponseOut"></h4>
-        <h2 id="traduce" className="subtitle">
+    <div className="container center input-field col s12">
+    <a id="triggerAnswer" onClick={showAnswer} className="waves-effect waves-light btn-large">Vérifier</a>
+    <a onClick={initValue} id="trigger" className="button ">Démarer</a>
 
-        </h2>
-        </div>
+    <h4 className="white-text" id="reponseOut"></h4>
+    <h2 id="traduce" className="subtitle">
 
-        </div>
+    </h2>
+    </div>
 
-        </div>
+    </div>
 
-        </div>
-        </div>
-        );
+    </div>
 
-        export default BasicExample;
-
-        ReactDOM.render(<BasicExample />, document.getElementById("index"));
+    </div>
+    </div>);
+    
+export default RootComponent;
+ReactDOM.render(<RootComponent />, document.getElementById("index"));

@@ -8,64 +8,67 @@ import style2 from "./css/style.css";
 import Button from '@material-ui/core/Button';
 
 
-//  function handleClick() {
-//     console.log('Click happened');}
-// function initValue () {
-//   let quotes = 
-//   [
-//   {fr : "Etre sage comme une image", es :"Ser más bueno que el santo", ot:"Miguel de Cervantes"},
-//   {fr:"Une histoire sans queue ni tête",es:"Una historia sin pies ni cabeza",ot:"Salvador Dali"},
-//   {fr:"En un clin d’oeil",es:"En un abrir y cerrar de ojos",ot:"Pablo Picasso"},
-//   {fr:"En avoir l’eau à la bouche",es:"Hacerse la boca agua",ot:"Pedro Almodóvar"},
-//   {fr:"Filer à l’anglaise",es:"Irse a la francesa",ot:"Pablo Neruda"},
-//   {fr:"Apprendre par coeur",es:"Saberse de memoria",ot:"Octavio Paz"},
-//   {fr:"Passer une nuit blanche",es:"Pasar la noche en vela",ot:"Isabel Allende"},
-//   {fr:"Aller comme un gant",es:"Encajar perfectamente",ot:"Frida Kahlo"},
-//   {fr:"Etre comme un coq en pâte",es:"Tener una vida de reyes",ot:"Hemingway"},
-//   {fr:"Ce n’est pas la mer à boire !",es:"No es para tanto !",ot:"Che Guevara"},
+ function handleClick() {
+    console.log('Click happened');}
+    var saveTraduce = []
+function initValue () {
+  let quotes = 
+  [
+  {fr : "Etre sage comme une image", es :"Ser más bueno que el santo", ot:"Miguel de Cervantes"},
+  {fr:"Une histoire sans queue ni tête",es:"Una historia sin pies ni cabeza",ot:"Salvador Dali"},
+  {fr:"En un clin d’oeil",es:"En un abrir y cerrar de ojos",ot:"Pablo Picasso"},
+  {fr:"En avoir l’eau à la bouche",es:"Hacerse la boca agua",ot:"Pedro Almodóvar"},
+  {fr:"Filer à l’anglaise",es:"Irse a la francesa",ot:"Pablo Neruda"},
+  {fr:"Apprendre par coeur",es:"Saberse de memoria",ot:"Octavio Paz"},
+  {fr:"Passer une nuit blanche",es:"Pasar la noche en vela",ot:"Isabel Allende"},
+  {fr:"Aller comme un gant",es:"Encajar perfectamente",ot:"Frida Kahlo"},
+  {fr:"Etre comme un coq en pâte",es:"Tener una vida de reyes",ot:"Hemingway"},
+  {fr:"Ce n’est pas la mer à boire !",es:"No es para tanto !",ot:"Che Guevara"},
 
-//   {fr : "Avoir quelqu’un dans le nez", es :"No soportar a una persona", ot:"Miguel de Cervantes"},
-//   {fr:"Perdre la face",es:"Perder la cara",ot:"Salvador Dali"},
-//   {fr:"Faire d’une pierre, deux coups",es:"Matar dos pájaros de un tiro",ot:"Pablo Picasso"},
-//   {fr:"Avoir du cran",es:"Tener las agallas",ot:"Pedro Almodóvar"},
-//   {fr:"Ne pas être sorti de l’auberge",es:"No salimos de una que nos metemos en otra",ot:"Pablo Neruda"},
-//   {fr:"Apprendre par coeur",es:"Saberse de memoria",ot:"Octavio Paz"},
-//   {fr:"Passer une nuit blanche",es:"Pasar la noche en vela",ot:"Isabel Allende"},
-//   {fr:"Aller comme un gant",es:"Encajar perfectamente",ot:"Frida Kahlo"},
-//   {fr:"Etre comme un coq en pâte",es:"Tener una vida de reyes",ot:"Hemingway"},
-//   {fr:"Ce n’est pas la mer à boire !",es:"No es para tanto !",ot:"Che Guevara"},
+  {fr : "Avoir quelqu’un dans le nez", es :"No soportar a una persona", ot:"Miguel de Cervantes"},
+  {fr:"Perdre la face",es:"Perder la cara",ot:"Salvador Dali"},
+  {fr:"Faire d’une pierre, deux coups",es:"Matar dos pájaros de un tiro",ot:"Pablo Picasso"},
+  {fr:"Avoir du cran",es:"Tener las agallas",ot:"Pedro Almodóvar"},
+  {fr:"Ne pas être sorti de l’auberge",es:"No salimos de una que nos metemos en otra",ot:"Pablo Neruda"},
+  {fr:"Apprendre par coeur",es:"Saberse de memoria",ot:"Octavio Paz"},
+  {fr:"Passer une nuit blanche",es:"Pasar la noche en vela",ot:"Isabel Allende"},
+  {fr:"Aller comme un gant",es:"Encajar perfectamente",ot:"Frida Kahlo"},
+  {fr:"Etre comme un coq en pâte",es:"Tener una vida de reyes",ot:"Hemingway"},
+  {fr:"Ce n’est pas la mer à boire !",es:"No es para tanto !",ot:"Che Guevara"},
 
-//   ];
-
-
-
-//   let x = quotes.length ;
-//   let y = Math.floor((Math.random() * x) + 0);
-//   document.getElementById("start").innerHTML = quotes[y].fr;
-
-//   saveTraduce.push(quotes[y].es);
-//   console.log(saveTraduce);
-//         // document.getElementById("othor").innerHTML = quotes2[y].ot;
-
-//       };
+  ];
 
 
 
-//     function  showAnswer() {
-//         let reponse = document.getElementById("reponseIn").value
+  let x = quotes.length ;
+  let y = Math.floor((Math.random() * x) + 0);
+  document.getElementById("start").innerHTML = quotes[y].fr;
 
-//         if (reponse == saveTraduce[0]) {
-//           document.getElementById("reponseOut").innerHTML ="bravo"
-//         }
-//         else {
-//           document.getElementById("reponseOut").innerHTML =saveTraduce[0]
-//         }
-//       };
+  saveTraduce.push(quotes[y].es);
+  console.log(saveTraduce);
+        // document.getElementById("othor").innerHTML = quotes2[y].ot;
 
-//     function myFunction() {
-//         location.reload();
+      };
+
+
+
+    function  showAnswer() {
+        let reponse = document.getElementById("reponseIn").value
+
+        if (reponse == saveTraduce[0]) {
+          document.getElementById("reponseOut").innerHTML ="bravo"
+        }
+        else {
+          document.getElementById("reponseOut").innerHTML =saveTraduce[0]
+          console.log(saveTraduce);
+          saveTraduce=[];
+        }
+      };
+
+    function myFunction() {
+        location.reload();
  
-//       };
+      };
 
 
 
@@ -268,12 +271,12 @@ import Button from '@material-ui/core/Button';
         <div className="input-field col s6">
 
         <input id="reponseIn" type="text" className="validate white-text"/>
-        <label className="active white-text" for="first_name2">réponse</label>
+        <label className="active white-text" >réponse</label>
         </div>
 
         <div className="container center input-field col s12">
-        <a id="triggerAnswer" onClick="showAnswer()" className="waves-effect waves-light btn-large">Vérifier</a>
-        <a onClick="myFunction()" id="trigger" className="button ">suivant</a>
+        <a id="triggerAnswer" onClick={showAnswer} className="waves-effect waves-light btn-large">Vérifier</a>
+        <a onClick={initValue} id="trigger" className="button ">Démarer</a>
 
         <h4 className="white-text" id="reponseOut"></h4>
         <h2 id="traduce" className="subtitle">

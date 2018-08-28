@@ -4,7 +4,8 @@
   "description": "template for react app",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open",
+    // "start": "webpack-dev-server --mode development --open",
+    "start": "node server.js",
     "build": "webpack --mode production"
   },
   "author": "theophie vast",
